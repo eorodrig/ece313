@@ -1,0 +1,54 @@
+
+Dear All,					March 2014
+
+I am pleased to announce this newest release of my cnet network simulator.
+cnet v3.3.1 enables experimentation with a variety of data-link layer,
+network layer, and transport layer networking protocols in networks
+consisting of any combination of wide-area-networking (WAN),
+local-area-networking (LAN), or wireless-local-area-networking (WLAN) links.
+
+cnet runs on a variety of Linux/UNIX platforms, and Apple's Mac-OSX
+v10.4 and beyond. It does not run Windows.  The full distribution
+(about 2.9MB) includes all source code, Makefiles, documentation,
+and a few representative protocol examples, and is freely available
+under the GNU General Public Licence v2 from:
+
+    http://www.csse.uwa.edu.au/cnet/
+
+A quick overview, including some screenshots, may be found at:
+
+    http://www.csse.uwa.edu.au/cnet/introduction.html
+
+The main improvements of this main version are:
+
+    - cnet and its protocols are now written in ISO-C99, and the new
+      <stdint.h> and <stdbool.h> facilities are used wherever possible
+    - use of 64-bit datatypes to manage time in microseconds
+    - cnet now running on Mac-OSX, requiring XQuartz
+    - much improved documentation
+    - new WLAN link types, supported by specification and runtime
+      modification of state, Tx and Rx power, loss, gain, sensitivity,
+      signal-to-noise, current draw, received signal-strength and angle
+      of arrival.
+    - mobile nodes may determine position and move around the simulation map
+    - simplified access to the Tck/Tk interface to draw on simulation map
+    - addition of a (growing) support API of frequently-required functions
+
+This announcement will hopefully arrive in time for you to consider
+cnet's new features for your next teaching semester or term.
+
+A big thanks to all those who continue to contribute to cnet with
+ideas and bug finding, including students from The University of
+Western Australia and Dartmouth College.  Since being cited in
+Stalling's "Data and Computer Communications", 7th ed., the interest
+has been a bit overwhelming, and it's taken a bit too long to release
+this next version.  Thanks also to the ACM-SIGCSE and the Australian
+Apple University Consortium for both supporting this work.
+
+As ever, feedback about your use of cnet in your teaching is welcomed.
+
+_______________________________________________________________________________ 
+Assoc. Prof. Chris McDonald                E: chris@csse.uwa.edu.au
+Computer Science & Software Engineering    W: http://www.csse.uwa.edu.au/~chris
+The University of Western Australia, M002  T: +618 6488 2533
+Crawley, Western Australia, 6009           F: +618 6488 1089

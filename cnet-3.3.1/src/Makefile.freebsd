@@ -1,0 +1,30 @@
+#
+#  The following #defines are for FreeBSD (5.1-RELEASE)
+#  Thanks to Jordan Hubbard <jkh@freebsd.org>,
+#  Michael Haro <mharo@area51.fremont.ca.us>, and Rohan Joyce
+#  for making this port available.
+#
+LOCALBASE	= /usr/local
+
+PREFIX		= ${LOCALBASE}
+BINDIR		= ${PREFIX}/bin
+INCDIR		= ${PREFIX}/include
+
+INCLUDES	= -I${PREFIX}/include \
+		  -I${PREFIX}/include/tcl8.3 \
+		  -I${PREFIX}/include/tk8.3
+
+XINCLUDES	= -I${X11BASE}/include
+XLIBS		= -lXpm -lX11 -lm -L${X11BASE}/lib
+
+C99		= gcc -std=c99 -pedantic -Wall
+CFLAGS		= -fPIC $(INCLUDES) $(XINCLUDES)
+
+LD		= ${C99} -rdynamic
+LIBDIRS		= -L${PREFIX}/lib
+LIBS		= -ltcl83 -ltk83 -lm -lgnuregex
+STRIP		= strip
+
+
+
+include	Makefile.common

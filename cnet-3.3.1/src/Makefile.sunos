@@ -1,0 +1,19 @@
+#
+# The following #defines are for Sun's SunOS, >= SunOS4.1.2
+#	(is anyone reading this file?)
+#
+INCLUDES	=
+#
+XINCLUDES	= 
+XLIBS		= -ltcl -ltk -lX11 -lm
+#
+CFLAGS		= -O $(INCLUDES) $(XINCLUDES)
+C99		= gcc -std=c99 -pedantic -Wall
+
+LD		= gcc
+LIBDIRS		= -L/usr/local/lib
+LIBS		= -ldl -lm
+STRIP		= strip
+
+
+include	Makefile.common

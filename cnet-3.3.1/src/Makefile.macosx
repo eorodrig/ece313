@@ -1,0 +1,16 @@
+#
+# The following #defines are for:
+#	MacOS-X Darwin (6.4 onwards)
+#
+INCLUDES	+= -I/opt/X11/include
+C99		= gcc -std=c99 -Wall -Werror -pedantic
+CFLAGS		= -O3 $(INCLUDES)
+
+LD		= gcc -multiply_defined suppress
+LIBDIRS		=
+
+LIBS		= -ltcl -ltk
+STRIP		= strip
+
+
+include	Makefile.common

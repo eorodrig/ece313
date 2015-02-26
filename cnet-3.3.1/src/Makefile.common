@@ -1,0 +1,66 @@
+#
+#  You DO NOT need to modify this file to suit your system.
+#
+NAME	= cnet
+
+OBJ	= applicationlayer.o battery.o checksums.o cnetmain.o\
+	    compile.o drawframes.o error.o events.o exit.o format64.o\
+	    globals.o images.o ipod.o keyboard.o\
+	    lan.o leds.o lexical.o links.o mainwindow.o motd.o mt19937.o\
+	    nics.o nicmenu.o nicwindows.o nodes.o nodemenu.o nodewindows.o\
+	    parser.o physicallayer.o poisson.o position.o queuing.o random.o\
+	    save.o scheduler.o shmem.o statistics.o stdapplication.o stdio.o\
+	    tcltkfunctions.o timers.o topology.o trace.o vars.o\
+	    wan.o wlan.o
+
+DOTH	= cnet.h cnetprivate.h preferences.h\
+		mt19937.h tcltkfunctions.h hidenames.h
+
+LEXICAL = lexical.h
+STATISTICS = statistics.h
+PHYSICAL = physicallayer.h
+SCHEDULER = scheduler.h
+
+# -------------------------------------------------------------------------
+
+$(NAME):	$(OBJ)
+		$(LD) $(LDFLAGS) -o $(NAME) $(OBJ) $(LIBDIRS) $(XLIBS) $(LIBS)
+		@chmod 755 $(NAME)
+
+compile.o:	$(DOTH) compile.c \
+			compile/freebsd.c \
+			compile/irix5.c \
+			compile/netbsd.c \
+			compile/linux.c \
+			compile/macosx.c \
+			compile/osf1.c \
+			compile/solaris.c \
+			compile/sunos.c
+	$(C99) $(CFLAGS) -c compile.c
+
+lexical.o:	$(DOTH) $(LEXICAL) lexical.c
+	$(C99) $(CFLAGS) -c lexical.c
+
+parser.o:	$(DOTH) $(LEXICAL) parser.c
+	$(C99) $(CFLAGS) -c parser.c
+
+queuing.o:	$(DOTH) $(SCHEDULER) queuing.c
+	$(C99) $(CFLAGS) -c queuing.c
+
+scheduler.o:	$(DOTH) $(SCHEDULER) $(PHYSICAL) scheduler.c
+	$(C99) $(CFLAGS) -c scheduler.c
+
+physicallayer.o:	$(DOTH) $(PHYSICAL) physicallayer.c
+	$(C99) $(CFLAGS) -c physicallayer.c
+
+wan.o:	$(DOTH) $(PHYSICAL) wan.c
+	$(C99) $(CFLAGS) -c wan.c
+
+lan.o:	$(DOTH) $(PHYSICAL) lan.c
+	$(C99) $(CFLAGS) -c lan.c
+
+wlan.o:	$(DOTH) $(PHYSICAL) wlan.c
+	$(C99) $(CFLAGS) -c wlan.c
+
+%.o : %.c $(DOTH)
+	$(C99) $(CFLAGS) -c $<

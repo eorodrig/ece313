@@ -1,0 +1,32 @@
+#
+# The following constants are for:
+#	Linux ELF systems (kernel 1.2.13 onwards)
+#	gcc (2.7.0 onwards)
+#	binutils 2.5.2, and
+#	libelf (0.6.4 onwards)
+#
+WARNINGS =	-Wall -Werror -Wshadow -Wpointer-arith -Wcast-qual \
+		-Wcast-align -Wwrite-strings -Wconversion \
+		-Wstrict-prototypes -Wredundant-decls -Winline \
+		-Wcomments -Wtrigraphs -Wimport -Wundef
+#
+# you may need these for much older Linux systems:
+#INCLUDES	= -I/usr/include/libelf
+#XINCLUDES	= -I/usr/X11R6/include
+#XLIBDIRS	= -L/usr/X11R6/lib
+#XLIBS		= -ltcl -ltk -lX11
+#
+# or you may need something like:
+XINCLUDES	= -I/usr/include/tcl8.5
+XLIBS		= -ltcl8.5 -ltk8.5 -lX11
+#
+C99		= gcc -std=c99 -Wall -Werror -pedantic
+CFLAGS		= -O3 -fPIC $(INCLUDES) $(XINCLUDES)
+#
+LD		= gcc -rdynamic
+LIBDIRS		= $(XLIBDIRS)
+LIBS		= -lelf -ldl -lm
+STRIP		= strip
+
+
+include	Makefile.common

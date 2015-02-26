@@ -1,0 +1,9 @@
+#
+# The following #defines are for:
+#	MacOS-X Darwin (6.4 onwards)
+#
+# Note that we don't need to use anything from Apple's X11
+#
+NAME	= libcnetsupport-osx.a
+
+include	Makefile.common

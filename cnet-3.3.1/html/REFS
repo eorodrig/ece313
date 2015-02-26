@@ -1,0 +1,40 @@
+<!--
+Examples of some large projects</a>,
+such as those written by
+<a href="http://www.csse.uwa.edu.au/~chris/cnet/aricstewart/">
+Aric Stewart</a>
+and
+<a href="http://www.csse.uwa.edu.au/~chris/cnet/kuhnl/">
+Leema Kuhn and Robert Anderson</a>
+(all supervised by Prof. Jeff Ondich),
+are sought.
+<p>
+
+<h3>References</h3>
+<dl>
+<dt>[McD91]</dt>
+    <dd><i><a href="http://www.csse.uwa.edu.au/cnet/cnet91.ps.gz">
+	A Network Specification Language and Execution Environment
+    	for Undergraduate Teaching</a></i>,
+    C.S. McDonald,
+    Proc. of the ACM Computer Science Education Technical Symposium '91,
+    San Antonio, Texas, Mar 1991,
+    pp25-34.
+    </dd>
+<dt>[McD93]</dt>
+    <dd><i><a href="http://www.csse.uwa.edu.au/cnet/cnet93.ps.gz">
+	Network Simulation Using User-level Context Switching</a></i>,
+    C.S. McDonald,
+    Proc. of the Australian UNIX Users' Group Conference '93,
+    Sydney, Sept 1993, pp1-10.
+    </dd>
+<dt>[McD96]</dt>
+    <dd>
+    <a href="http://www.csse.uwa.edu.au/cnet/sigcse96.shar.gz">
+    <i>Teaching Computer Networking Principles Using Simulation</i></a>
+    <br>
+    Handouts from Chris McDonald's ACM-SIGCSE'96 workshop
+    (compressed to 320K).
+    </dd>
+</dl>
+-->

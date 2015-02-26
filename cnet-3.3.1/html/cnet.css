@@ -1,0 +1,76 @@
+<style>
+table.thin {
+    border-width:	1px 1px 1px 1px;
+    border-style:	solid;
+    border-collapse:	collapse;
+}
+
+th.thin {
+    border-width:	1px 1px 1px 1px;
+    border-style:	solid;
+    background-color:	#cccccc;
+    border-color:	gray;
+    padding:		2px;
+    text-align:		center;
+    vertical-align:	top;
+}
+
+td.thin {
+    border-width:	1px 1px 1px 1px;
+    border-style:	solid;
+    border-color:	gray;
+    padding:		2px;
+    text-align:		left;
+    vertical-align:	top;
+}
+
+td.attr0 {
+    border-width:	1px 1px 1px 1px;
+    border-style:	solid;
+    border-color:	gray;
+    padding:		2px;
+    text-align:		left;
+    vertical-align:	top;
+    background-color:	white
+}
+
+td.attr1 {
+    border-width:	1px 1px 1px 1px;
+    border-style:	solid;
+    border-color:	gray;
+    padding:		2px;
+    text-align:		left;
+    vertical-align:	top;
+    background-color:	#dddddd
+}
+
+dt {
+    font-weight:	bold;
+}
+
+dd {
+    margin-left:	2em;
+}
+
+h3 {
+    font-size:		1.2em;
+    color:		#ce7019;
+    margin-bottom:	0.6em;
+}
+
+.code {
+    border:		1px solid gray;
+    background-color:	#e2e2e2;
+    padding:		1em;
+    white-space:	nowrap;
+}
+
+img.imgborder {
+    border:		1px solid gray;
+}
+
+ul#bullet {
+    list-style-image:	url(images/bullet-link.gif);
+    margin:		0 9px 0 8px;
+}
+</style>

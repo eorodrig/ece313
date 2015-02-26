@@ -1,0 +1,19 @@
+#
+# The following #defines are for SGI's IRIX (tested on IRIX-5.3)
+#
+INCLUDES	=
+
+XINCLUDES	= -I/usr/include/X11
+XLIBS		= -ltcl -ltk -lX11 -lm
+
+CFLAGS		= -O $(INCLUDES) $(XINCLUDES)
+C99		= gcc -std=c99 -pedantic -Wall
+
+LD		= gcc
+#LD		= cc
+LIBDIRS		= -L/usr/lib
+LIBS		= -lelf -lmld -lm 
+STRIP		= strip
+
+
+include	Makefile.common

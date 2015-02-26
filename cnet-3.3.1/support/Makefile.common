@@ -1,0 +1,14 @@
+#
+CC		= gcc
+CFLAGS		= -std=c99 -pedantic -Wall -Werror -O3 -fPIC
+
+DOTH		= cnetsupport.h
+OBJ		= hashtable.o haversine.o lexical.o md5.o queue.o vector.o
+
+$(NAME):	$(OBJ)
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
+		@cp -p $(NAME) ../lib
+
+%.o : %.c $(DOTH)
+	$(CC) $(CFLAGS) -c $<

@@ -1,0 +1,20 @@
+#
+# The following #defines are for OSF/1 V4.0 on a DEC Alpha
+#
+INCLUDES	=
+#
+XINCLUDES	= -I/usr/local/include -I/usr/contrib/include
+XLIBS		= -ltcl -ltk -lX11 -lm
+#
+CFLAGS		= -O $(INCLUDES) $(XINCLUDES)
+C99		= gcc -std=c99 -pedantic -Wall
+
+LD		= gcc
+LDFLAGS		=
+
+LIBDIRS		= -L/usr/local/lib -L/usr/contrib/lib
+LIBS		= -lm
+STRIP		= strip
+
+
+include	Makefile.common

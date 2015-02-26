@@ -1,0 +1,20 @@
+#
+# The following #defines are for Sun's Solaris, >= Solaris.[23]
+#
+INCLUDES	=
+#
+XINCLUDES	=
+XLIBS		= -ltcl -ltk -lX11 -lm
+# or you may need something like:
+#XLIBS		= -ltcl8.3 -ltk8.3 -lX11 -lm
+#
+CFLAGS		= -O $(INCLUDES) $(XINCLUDES)
+C99		= gcc -std=c99 -pedantic -Wall
+
+LD		= gcc
+LIBDIRS		= -L$(OPENWINHOME)/lib
+LIBS		= -ldl -lelf -lgen -lm
+STRIP		= strip
+
+
+include	Makefile.common

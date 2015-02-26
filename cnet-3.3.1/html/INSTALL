@@ -1,0 +1,24 @@
+#!/bin/sh
+
+AND="CLICK KEYBOARD STOPANDWAIT TICKTOCK"
+
+DATE=`date '+%a %b %e %l:%M%p %Y'`
+TMP=".tmp-$$b"
+
+for i in [a-z]*.html
+do
+	( if grep -q BOTTOM.OF.HEADER $i
+	  then
+		sed -e '1,/BOTTOM.OF.HEADER/d' < $i
+	  else
+		cat $i
+	  fi ) | sed -e '/TOP.OF.FOOTER/,$d' > $TMP
+
+	cat HEADER $TMP > $i
+	sed -e "s/Last modified:.*/Last modified: $DATE/" < FOOTER >> $i
+
+	rm -f $TMP
+done
+
+chmod 711 images
+chmod 644 cnet.css [a-z]*.html images/*.* $AND

@@ -1,0 +1,14 @@
+
+compile		 = "ticktock.c"
+winopen		 = true
+
+host perth {
+    winx=0, winy=50
+    link to sydney
+}
+
+host sydney {
+    winx=550, winy=50
+    east east east east of perth
+    link to perth
+}

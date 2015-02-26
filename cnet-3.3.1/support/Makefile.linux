@@ -1,0 +1,10 @@
+#
+# The following constants are for:
+#	Linux ELF systems (kernel 1.2.13 onwards)
+#	gcc (2.7.0 onwards)
+#	binutils 2.5.2, and
+#	libelf (0.6.4 onwards)
+#
+NAME	= libcnetsupport-linux.a
+
+include	Makefile.common
